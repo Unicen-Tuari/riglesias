@@ -1,0 +1,67 @@
+*{
+  font-family: sans-serif;
+  margin:0px;
+  padding:0px;
+}
+
+#header{
+  height: 100px;
+  background-color: #3399ff;
+  text-align: center;
+  color: white;
+}
+
+#footer{
+  height: 100px;
+  background-color: #3399ff;
+  text-align: right;
+}
+
+#footer > p{
+  color: white;
+  font-size: 10px;
+  margin-right:20px;
+}
+
+#user-ops,#crupier{
+  width:30%;
+  height:460px;
+  background-color: #00ff99;
+  float:left;
+}
+
+#tablero{
+  float:left;
+  width: 40%;
+  background-color: #2CBF19;
+  height: 460px;
+}
+
+.clear{
+  clear:both;
+}
+
+#layer > input{
+  width:100px;
+  height:100px;
+  float:left;
+  font-size: 20px;
+  color:black;
+}
+
+#msg_board{
+  background-color: white;
+  height:150px;
+  overflow: scroll;
+}
+
+#layer{
+  padding:30px;
+  background-image:url('../img/ruleta.gif');
+  background-size: cover;
+  height:400px;
+}
+
+.triple_slot{
+  width:300px !important;
+}
