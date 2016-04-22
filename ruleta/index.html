@@ -22,19 +22,16 @@
         <input class="bet" type="button" name="bet100" value="100" onclick="addCash(100);">
 
 
-        <div id="msg_board">
-          <p id="msg"></p>
-        </div>
+        <p class="txt_saldo">Su saldo es de $<span id="saldo"></span></p>
 
-        <input type="button" name="name" value="Girar Ruleta" onclick="play();">
-
-        <p>Su saldo es de $<span id="saldo"></span></p>
+        <input id="btn_spin" type="button" name="name" value="Girar Ruleta" onclick="play();">
       </div>
 
 
 
 
       <div id="tablero">
+
         <div id="layer">
           <input class="triple_slot" type="button" name="name" value="0" onclick="selectNum(0);">
           <div class="clear"></div>
@@ -50,10 +47,14 @@
           <input type="button" name="name" value="8" onclick="selectNum(8);">
           <input type="button" name="name" value="9" onclick="selectNum(9);">
         </div>
+          <img id="croupier" src="img/croupier.png" alt=""/>
       </div>
 
       <div id="crupier">
-        <p>aca va el tipito</p>
+
+        <div id="msg_board">
+          <p id="msg"></p>
+        </div>
       </div>
     </div>
 
