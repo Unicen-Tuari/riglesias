@@ -1,0 +1,259 @@
+*{
+  font-family: sans-serif;
+  margin:0px;
+  padding:0px;
+}
+
+/*----------------------------Colores de Paletton.com---------------------------*/
+/* Palette URL: http://paletton.com/#uid=30s0K0kleqtbzEKgVuIpcmGtdhZ
+
+------------------------------------------------------------------------------*/
+body{
+    background-color:#a5dd68;
+}
+
+#head_menu{
+  width:100%;
+  height:auto;
+  background-color: white;
+  /*background-image: url('../img/banner.jpg');*/
+}
+
+#head_menu h1{
+  text-align: center;
+}
+
+#banner{
+  width: 100%;
+}
+
+nav{
+  width:100%;
+}
+
+#bar_nav{
+  list-style-type: none;
+  background-color:#49810B;
+}
+
+#bar_nav li{
+  display: inline;
+}
+
+#bar_nav li a{
+  color:#FFF;
+  text-decoration: none;
+  font-size: 18px;
+  padding:10px;
+  display: inline-block;
+  text-align: center;
+}
+
+#bar_nav li a:hover{
+  background-color: #D38447;
+  color:white;
+}
+
+#content{
+  width:70%;
+  float:left;
+  /*padding-top:40px;*/
+  padding-bottom:40px;
+}
+
+#right_col,#left_col{
+  width:15%;
+  /*background-color: white;*/
+  float:left;
+}
+
+#content > article{
+  margin: 20px;
+  padding: 20px;
+  background-color: #C5EE98;
+  min-height: 310px;
+}
+
+.news-title{
+  font-size: 22px;
+  color:#161664;
+  margin:15px 0 8px 0;
+}
+
+.news-date{
+  font-size: 10px;
+  color:#575757;
+  margin-bottom: 15px;
+}
+
+.news-fig{
+  width:200px;
+  height:240px;
+  margin-left:20px;
+  margin-right:20px;
+  float:right;
+}
+
+.news-fig > figcaption{
+  font-size: 12px;
+  font-style: italic;
+  color: #575757;
+}
+
+.news-content > p{
+  font-family: "Tahoma";
+}
+
+.news-social{
+  margin-top:20px;
+}
+
+#separador{
+  clear:both;
+}
+
+
+
+
+footer > #fb{
+	background-image:url('../img/icons.png') no-repeat;
+	background-position:10px 10px;
+}
+
+
+footer p{
+	font-size:10px;
+	color:#FFF;
+}
+
+footer{
+	clear:both;
+}
+
+footer .copy{
+	float:left;
+}
+
+footer .links{
+	float:right;
+}
+#social{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+#social > li{
+	height:50px;
+	width:50px;
+	display: inline-block;
+	}
+
+#social > li > a > div{
+	height:50px;
+	width:50px;
+	background-image:url('../img/icons.png');
+}
+
+#links-footer{
+	height:54px;
+	background-color: #2f2f2f;
+	padding:10px;
+
+}
+
+footer #fb{
+	background-position: 0 50px;
+}
+footer #fb:hover{
+	background-position:0 0;
+}
+
+footer #tw{
+	background-position: -400px 50px;
+}
+footer #tw:hover{
+	background-position: -400px 0;
+}
+
+footer #yt{
+	background-position: 50px 50px;
+}
+footer #yt:hover{
+	background-position:50px 0;
+}
+
+.links-externos{
+  margin-top: 20px;
+  margin-right: 20px;
+  padding:20px;
+  background-color:#97cc51;
+}
+
+.links-externos p{
+  font-size: 10px;
+}
+
+.links-externos > figure > img{
+  width: 100%;
+}
+
+.last-post{
+  margin-top:20px;
+  margin-left: 20px;
+  padding:20px;
+  background-color: #66a323;
+  color:white;
+}
+
+.last-post ul{
+  margin-left: 15px;
+  margin-top:20px;
+  list-style-type: disclosure-closed;
+}
+
+.prods{
+  background-color: #a5dd68;
+  margin: 20px;
+}
+
+.prods ul{
+  list-style-type: none;
+}
+
+.prods ul > li{
+  float: left;
+  height: 210px;
+  width: 210px;
+  margin: 0 0 12px 12px;
+  position: relative;
+}
+
+.secc_name{
+  margin: 20px 20px 0;
+  background-color: #c5ee98;
+  height: 50px;
+  position:relative;
+}
+
+.secc_name h1{
+  color: #161664;
+  font-size: 22px;
+  margin: 12px;
+  position: absolute;
+}
+
+.desc{
+  bottom: 0;
+  height: 30px;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(32, 143, 150, 0.91);
+}
+
+.desc p{
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+}
