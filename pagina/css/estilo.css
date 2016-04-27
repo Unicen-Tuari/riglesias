@@ -257,3 +257,42 @@ footer #yt:hover{
   font-weight: bold;
   padding: 5px;
 }
+
+
+#content > section.prod_desc{
+  background-color: #c5ee98;
+  padding: 20px;
+  margin: 20px;
+  min-height: 240px;
+}
+
+#content > section.prod_desc p{
+  float: left;
+  font-family: "Tahoma";
+  margin: 15px 5px;
+  width: 100%;
+}
+
+#content .prod_img{
+  width:50%;
+}
+
+#content > section.prod_desc td, #content > section.prod_desc th{
+  background-color: rgb(32, 143, 150);
+  padding:10px;
+  font-size: 12px;
+  color:white;
+}
+
+.table_specs{
+  width:50%;
+  float:left;
+}
+
+form.coment textarea{
+  margin-top:20px;
+  margin-bottom: 20px;
+  resize: none;
+  padding: 10px;
+  width: 96%;
+}
