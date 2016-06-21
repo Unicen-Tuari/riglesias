@@ -1,0 +1,120 @@
+body{
+  background:
+  radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+  radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+  radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+  radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+  radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+  radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+  radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+  radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+  linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+  linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+  background-color: #300;
+  background-size: 100px 100px;
+
+  padding-top: 50px;
+}
+
+#mesa{
+  margin-top:20px;
+}
+
+#player-stats.panel-default,#chips-stats.panel-default{
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+#player-stats .panel-body{
+  color:white;
+}
+
+#player-stats .panel-body .list-group-item,
+#chips-stats .panel-body .list-group-item{
+  background-color: transparent;
+}
+
+#chip1,#chip5,#chip10,#chip25,#chip50,#chip100{
+  background-image: url('../img/chips.png');
+  width:75px;
+  height: 74px;
+}
+
+#chips-panel div{
+  float:left;
+  margin:4px;
+}
+
+#chip5{
+  background-position: -74px 0px;
+}
+
+#chip10{
+  background-position: -150px 0px;
+}
+
+#chip25{
+  background-position: 0px -74px;
+}
+
+#chip50{
+  background-position: -75px -74px;
+}
+
+#chip100{
+  background-position: -150px -74px;
+}
+
+
+#overlay-cortina{
+  position: absolute;
+  opacity: 0.8;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+#layout-mesa{
+  margin:35px 200px 10px;
+  background-color: white;
+}
+
+#layout-mesa button{
+  width:100%;
+  height:100%;
+  background-color: transparent;
+  border:none;
+}
+
+#layout-mesa button.rojo{
+  background-color: red;
+}
+
+#layout-mesa button.verde{
+  background-color: green;
+}
+
+#layout-mesa button{
+  background-color: black;
+}
+
+#layout-mesa .row div{
+  height:140px;
+  color:white;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  padding:4px;
+}
+
+@media (max-width: 767px){
+  #layout-mesa{
+    margin:0px;
+  }
+}
+
+#msg-panel{
+  overflow: scroll;
+  width:100%;
+  height:300px;
+}

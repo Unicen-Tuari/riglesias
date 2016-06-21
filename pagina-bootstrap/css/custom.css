@@ -1,0 +1,20 @@
+/*css personalizado*/
+.news-fig{
+  float:right;
+  margin-left: 30px;
+}
+.noticia{
+      min-height: 390px;
+}
+
+.pad-body{
+  margin-top: 70px;
+}
+.ribbon-logo{
+  background-color:#23b969;
+  height: 297px;
+}
+#nav-princ{
+  background-color: #66a323;
+  border-color: #66a323;
+}
