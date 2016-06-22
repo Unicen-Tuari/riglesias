@@ -3,26 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <style media="screen">
     #menu{
       margin-left: auto;
       margin-right: auto;
+      margin-top:5%;
       width: 500px;
       padding:50px;
-      background-color: #2f67d4;
     }
   </style>
   </head>
 
   <body>
-    <div id="menu">
-      <ul>
-        <li><a href="pagina/index.html">pagina</a></li>
-        <li><a href="pagina-bootstrap/index.html">pagina 2</a></li>
-        <li><a href="ruleta/index.html">ruleta</a></li>
-        <li><a href="ruleta-2/index.html">ruleta 2</a></li>
+    <div id="menu" class="panel panel-default">
+      <div class="panel-heading">Seleccione el sitio:</div>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="pagina/index.html">pagina</a></li>
+        <li class="list-group-item"><a href="pagina-bootstrap/index.html">pagina 2</a></li>
+        <li class="list-group-item"><a href="ruleta/index.html">ruleta</a></li>
+        <li class="list-group-item"><a href="ruleta-2/index.html">ruleta 2</a></li>
       </ul>
+
     </div>
   </body>
 </html>
