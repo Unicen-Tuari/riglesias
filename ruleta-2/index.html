@@ -12,7 +12,12 @@
 
   </head>
   <body>
-  <div id="overlay-cortina"></div>
+  <div id="overlay-cortina">
+      <div style="margin:auto;">
+        <h1>Game Over</h1>
+        <p>Inicie un nuevo Juego</p>
+      </div>
+  </div>
   <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
@@ -28,7 +33,7 @@
             <ul class="nav navbar-nav">
               <li class="active"><a id="btn-newgame" href="#">Nuevo Juego</a></li>
               <li><a href="#about" data-toggle="modal" data-target="#myModal">Reglas</a></li>
-              <li><a href="#contact">Contact</a></li>
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -63,7 +68,7 @@
 <div id="mesa" class="container-fluid">
 <div class="row">
 
-<div class="col-md-2">
+<div class="col-md-4 col-lg-3">
   <!-- estadisticas -->
   <div id="player-stats" class="panel panel-default">
     <div class="panel-heading">
@@ -72,7 +77,7 @@
           <a href="#">
             <img class="media-object" src="img/user.png" alt="">
           </a>
-          <h3>Ramiro Iglesias</h3>
+          <h3>Ramon Perez</h3>
         </div>
       </div>
     </div>
@@ -80,39 +85,41 @@
       <ul class="list-group">
         <li class="list-group-item">Tiempo jugando:<span id="usr">10:21</span></li>
         <li class="list-group-item">Turnos:<span id="usr">14</span></li>
-        <li class="list-group-item">Turnos Ganados:<span id="usr">2</span></li>
-        <li class="list-group-item">Turnos Perdidos:<span id="usr">12</span></li>
       </ul>
     </div>
     <div class="panel-footer">Panel footer</div>
   </div>
   <!-- //estadisticas -->
 
+  <audio id="jukebox" controls loop> <!--autoplay-->
+   <source src="sounds/jazz2.mp3" type="audio/mpeg">
+ </audio>
 
   <!-- fichas -->
   <div id="chips-stats" class="panel panel-default">
     <div class="panel-heading">Fichas</div>
     <div class="panel-body">
       <div id="chips-panel">
-        <div id="chip1"></div>
-        <div id="chip5"></div>
-        <div id="chip10"></div>
-        <div id="chip25"></div>
-        <div id="chip50"></div>
-        <div id="chip100"></div>
+        <div valor="1" id="chip1"></div>
+        <div valor="5" id="chip5"></div>
+        <div valor="10" id="chip10"></div>
+        <div valor="25" id="chip25"></div>
+        <div valor="50" id="chip50"></div>
+        <div valor="100" id="chip100"></div>
       </div>
     </div>
     <div class="panel-footer"><b>Saldo: $</b><span id="saldo">40.00</span></div>
   </div>
   <!-- //fichas -->
 <a id="btn-girar" class="btn btn-lg btn-success" role="button" href="#">Girar ruleta!</a>
+<a id="btn-revancha" class="btn btn-lg btn-danger" role="button" href="#">Revancha!</a>
 
 </div>
 
 
 
 <!-- mesa -->
-<div class="col-md-8">
+<div class="col-md-5 col-lg-6">
   <div id="layout-mesa">
     <div class="container-fluid">
       <div class="row">
@@ -143,6 +150,21 @@
         <div class="col-sm-4"></div>
       </div>
 
+      <div class="row chance">
+        <div class="col-sm-6"><button value="red" class="numbtn">ROJO</button></div>
+        <div class="col-sm-6"><button value="black" class="numbtn">NEGRO</button></div>
+      </div>
+
+      <div class="row chance">
+        <div class="col-sm-6"><button value="odd" class="numbtn">PAR</button></div>
+        <div class="col-sm-6"><button value="even" class="numbtn">IMPAR</button></div>
+      </div>
+
+      <div class="row chance">
+        <div class="col-sm-6"><button value="low" class="numbtn">MENOR</button></div>
+        <div class="col-sm-6"><button value="high" class="numbtn">MAYOR</button></div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -150,11 +172,11 @@
 
 
 <!-- //////////////////////////// -->
-<div class="col-md-2">
+<div class="col-md-3 col-lg-3">
   <div class="panel panel-default">
     <div class="panel-heading">Mensajes</div>
     <div id="msg-panel" class="panel-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
     </div>
     <div class="panel-footer"></div>
   </div>

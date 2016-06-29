@@ -64,26 +64,35 @@ body{
   background-position: -150px -74px;
 }
 
+#layout-mesa .chance button{
+  font-size: 30px !important;
+}
 
 #overlay-cortina{
-  position: absolute;
-  opacity: 0.8;
-  background-color: black;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100%;
   width: 100%;
   z-index: 999;
+  text-align: center;
+  color:white;
+  font-size: 30px;
 }
 
 #layout-mesa{
-  margin:35px 200px 10px;
+  margin:20px 13% 10px;
   background-color: white;
 }
 
 #layout-mesa button{
   width:100%;
   height:100%;
-  background-color: transparent;
+  background-color: black;
   border:none;
+}
+
+#layout-mesa button:hover{
+  background-color: rgba(115, 90, 114, 0.75) !important;
 }
 
 #layout-mesa button.rojo{
@@ -94,16 +103,32 @@ body{
   background-color: green;
 }
 
-#layout-mesa button{
-  background-color: black;
+.winner{
+   animation: ganador 1s linear 1s infinite alternate;
+}
+@keyframes ganador{
+    0%   {background-color:orange; }
+    50%  {background-color:cyan; }
+    100% {background-color:orange; }
+}
+
+#btn-revancha{
+  display: none;
+}
+
+.cont-bet{
+  position: absolute;
+  top: 7px;
+  right: 10px;
 }
 
 #layout-mesa .row div{
-  height:140px;
+  height:95px;
   color:white;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   font-weight: bold;
+  font-family: serif;
   padding:4px;
 }
 

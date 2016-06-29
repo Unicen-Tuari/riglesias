@@ -9,6 +9,7 @@
     <link href="css/custom.css" rel="stylesheet">
     <script src="js/jquery.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/funciones.js" charset="utf-8"></script>
 
   </head>
 
@@ -19,19 +20,62 @@
 <!-- wrapper -->
 
 <!-- title bar -->
-      <!-- <header class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1>Camping, Pesca y Motos</h1>
-          <p>Hoy puede ser el dia en que realmente te sientas libre!</p>
+      <div class="container-fluid hidden-sm hidden-xs">
+        <div class="row ribbon-logo">
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1>Camping, Pesca y Motos</h1>
+              <p>Hoy puede ser el dia en que realmente te sientas libre!</p>
+            </div> -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="img/camping2.jpg" alt="el slide 1 viteh" class="img-responsive" style="background-size: cover;">
+                  <div class="carousel-caption">
+                    "Piérdete en el mundo y encuéntrate contigo mismo"
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/crew.jpg" alt="el slide 2 viteh" class="img-responsive">
+                  <div class="carousel-caption">
+                    "Escucho a las rutas llamarme, son voces graves que me invitan a rodar..."
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/slide3.jpg" alt="el slide 3 viteh" class="img-responsive">
+                  <div class="carousel-caption">
+                    "La felicidad solo es real cuando es compartida"
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
         </div>
-      </header> -->
+      </div>
 <!-- //title bar -->
 
 
 <!-- nav bar -->
 
-        <nav class="navbar navbar-default">
+        <nav id="nav-princ" class="navbar navbar-default">
         	<div class="container-fluid">
+            <!-- <div class="ribbon"><h1>Camping, Pesca y Motos</h1></div> -->
         		<div class="navbar-header">
         			<button aria-expanded="false" data-target="#bs-example-navbar-collapse-6" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
         				<span class="sr-only">Toggle navigation</span>
@@ -42,10 +86,10 @@
         		</div>
         		<div id="bs-example-navbar-collapse-6" class="collapse navbar-collapse">
         			<ul class="nav navbar-nav">
-        				<li class="active"><a href="#">Home</a></li>
-        				<li><a href="#">Productos</a></li>
-        				<li><a href="#">Guia</a></li>
-        				<li><a href="#">Contacto</a></li>
+        				<li class="active"><a href="#" id="home">Home</a></li>
+        				<li><a href="#" id="productos">Productos</a></li>
+        				<li><a href="#" id="guia">Guia</a></li>
+        				<li><a href="#" id="contacto">Contacto</a></li>
         			</ul>
         		</div>
         	</div>
@@ -55,8 +99,9 @@
 
 
 <!-- content -->
-        <div class="container-fluid">
+        <div class="container-fluid pad-body">
           <div class="row">
+
             <div id="left-col" class="col-md-2">
               <section class="ultimos-post">
                 <h3 class="text-center">Últimos Posts</h3>
@@ -71,51 +116,8 @@
             </div>
 
 <!-- noticias -->
-            <div class="col-md-8">
+            <div id="contenedor-data" class="col-md-8">
 
-              <article class="noticia well">
-                <div class="art-head">
-                  <h2>LLegó la nueva Doite XR 4</h2>
-                  <p>22 de Abril de 2016</p>
-                  <hr>
-                  <figure class="news-fig">
-                    <img src="img/carpa_doite_small.jpg" alt="Carpa Doite" />
-                    <figcaption>La carpa Doite armada</figcaption>
-                  </figure>
-                  <p>Diseñada como carpa profesional para 4 personas con faldón completo. Estructura de varillas de duraluminio para menor peso y mayor resistencia. Ventilacion trasera para mejor circulación del aire. Extensión frontal de cubretecho aumenta espacio útil. Cubretecho: Poliester Rip Stop, densidad 210 T,  grosor fibra 68 D. Efecto de impermeabilidad de 5.000 mm, con costuras selladas y protección solar UPF 50+.
-                  Piso de Nylon 210 T/ 70 D, recubrimiento de Poliuretano de 5.000 mm. Varillas de Duraluminio de 9,5 mm (Etna 2) y 8,5 mm (Atlas 2 e Himalaya 2).</p>
-
-                </div>
-              </article>
-
-              <article class="noticia well">
-                <div class="art-head">
-                  <h2>Cañas Maxia Aqua</h2>
-                  <p>20 de Abril de 2016</p>
-                  <hr>
-                  <figure class="news-fig">
-                    <img src="img/cana_pescar_small.jpg" alt="Caña de pescar" />
-                    <figcaption>Cañas Maxia Aqua</figcaption>
-                  </figure>
-                  <p>Maxia Rods es una joven e innovadora empresa asturiana que se ha convertido en el primer fabricante de cañas de pesca con mosca “Made in Spain”. Nació del conocimiento y tecnología de la empresa italiana Modern Flies (Aldo Silva) y cuenta con el asesoramiento del instructor internacional de lanzado Alejandro Viñuales quien partiendo de la base de años de experiencia ha impulsado y desarrollado una nueva generación de cañas adaptadas a todo tipo de técnicas y escenarios así como a las actuales y en constante evolución métodos de pesca en alta competición a nivel europeo e internacional.</p>
-
-                </div>
-              </article>
-
-              <article class="noticia well">
-                <div class="art-head">
-                  <h2>Nueva Honda NC 700X</h2>
-                  <p>22 de Abril de 2016</p>
-                  <hr>
-                  <figure class="news-fig">
-                    <img src="img/honda_ncx700_small.jpg" alt="Honda NCX700" />
-                    <figcaption>La carpa Doite armada</figcaption>
-                  </figure>
-                  <p>Diseñada y pensada para aquellos que disfrutan de los detalles y las prestaciones de una moto de alta gama, su practicidad y adaptabilidad se respaldan en su comodidad, su robustez integral, su bajo consumo y su máximo rendimiento.<br>
-                  Debido a la agilidad en su conducción, los bajos niveles de mantenimiento y las ruedas de fundición de aluminio, la Honda NC 700X se  posiciona como la alternativa ideal para el uso urbano, deportivo o para travesías prolongadas.</p>
-
-                </div>
-              </article>
             </div>
 <!-- //noticias -->
 
@@ -131,7 +133,12 @@
 <!-- //aside -->
           </div>
 
-          <div class="row"></div>
+          <div class="row">
+            <footer>
+
+            </footer>
+
+          </div>
 
         </div>
 

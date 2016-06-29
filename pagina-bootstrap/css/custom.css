@@ -5,6 +5,36 @@
 }
 .noticia{
       min-height: 390px;
+      padding: 40px;
+}
+
+.productos .caption{
+  height: 50px;
+}
+
+.productos .caption input{
+  float:left;
+  margin-right:10px;
+}
+
+.descripcion h3{
+  margin:5px;
+  text-align: center;
+}
+
+.btn-info{
+  position: absolute;
+  right: 48px;
+  top: 15px;
+}
+
+.ok{
+  right: 17px;
+  display:none;
+}
+
+.compare-check{
+  display:none;
 }
 
 .pad-body{
@@ -12,9 +42,17 @@
 }
 .ribbon-logo{
   background-color:#23b969;
-  height: 297px;
+  height: auto;
 }
 #nav-princ{
   background-color: #66a323;
   border-color: #66a323;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+#carousel-example-generic .carousel-caption{
+  font-size: 20px;
 }
