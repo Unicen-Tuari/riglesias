@@ -63,7 +63,7 @@ Game.prototype.Girar = function(){
       var num=(Math.floor((Math.random() * 11)));
       $('#msg-panel').prepend('<p>salió el número: '+num+'</p>');//borrar
       this.cameout=num;
-      $(".numbtn").eq(parseInt(this.cameout)).addClass('winner');
+
       console.log($(".numbtn").eq(parseInt(this.cameout)));
 };
 
@@ -93,7 +93,7 @@ Game.prototype.isOdd = function(){
 }
 
 Game.prototype.Refresh = function(){
-  //$(".numbtn").eq(this.cameout).removeClass('winner');
+
   this.bets_rev=this.bets;
   this.bets = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   this.cameout = -1;
@@ -101,9 +101,7 @@ Game.prototype.Refresh = function(){
   chip_selected=0;
   console.log('ronda finalizada');
   console.log(this.bets_rev);
-  setTimeout(function(){
-    $('button.numbtn.winner').removeClass('winner');
-  }, 3000);
+
 }
 
 Game.prototype.Resultado = function(){
