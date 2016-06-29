@@ -53,6 +53,8 @@ function getInformationByGroup(groupid,ids){
 }
 
 $(document).ready(function(){
+  cargaDatos('news');
+
   $('#home').on('click',function(){
     cargaDatos('news');
   });
@@ -61,7 +63,6 @@ $(document).ready(function(){
     cargaDatos('productos');
     $('.navbar-nav li').removeClass('active');
     $('#productos').parent().addClass('active');
-    console.log($(this).attr('id'));
   });
 
   $('body').on('click','#comparar',function(){

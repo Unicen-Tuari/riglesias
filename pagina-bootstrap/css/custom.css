@@ -53,6 +53,21 @@
     border-radius: 0px;
 }
 
+footer{
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+footer ul li{
+  display: inline;
+  margin:15px;
+}
+
+.footer-fondo{
+  background-color: black;
+  color:white;
+}
+
 #carousel-example-generic .carousel-caption{
   font-size: 20px;
 }
