@@ -101,8 +101,8 @@ Game.prototype.Refresh = function(){
   chip_selected=0;
   console.log('ronda finalizada');
   console.log(this.bets_rev);
-  setTimeout(function(){ 
-    $(".numbtn").eq(this.cameout).removeClass('winner');
+  setTimeout(function(){
+    $('button.numbtn.winner').removeClass('winner');
   }, 3000);
 }
 
