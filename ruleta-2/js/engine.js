@@ -56,7 +56,7 @@ Game.prototype.Start = function(){
   this.inic = true;
   this.bets = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   $('#saldo').html(jugador.saldo());
-  $("#rango").on('change',function(){console.log("peop")});
+
 };
 
 Game.prototype.Girar = function(){
