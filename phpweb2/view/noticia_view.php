@@ -1,5 +1,5 @@
 <?php
-require('libs/Smarty.class.php');
+// require('libs/Smarty.class.php');
 
 /**
  * clase noticia de la vista
@@ -19,7 +19,4 @@ class noticia_view
   }
 
 }
-
-
-
- ?>
+?>
