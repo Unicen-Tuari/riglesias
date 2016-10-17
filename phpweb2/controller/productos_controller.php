@@ -23,13 +23,12 @@ class productos_controller
 
   public function show_item(){
     if(isset($_REQUEST['item'])){
-      echo "item esta puesto";
+      //echo "item esta puesto";
       $id=$_REQUEST['item'];
-      print_r($id);
+      //print_r($id);
       $item = $this->productos_model->get_item($id);
       $this->productos_view->show_item($item);
     }else echo "no se proceso";
-
   }
 
 
