@@ -3,7 +3,7 @@
   float:right;
   margin-left: 30px;
 }
-.navbar-nav li a{
+#nav-princ .navbar-nav li a{
     color: white !important;
     font-weight: bold;
 }
