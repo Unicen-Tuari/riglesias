@@ -1,5 +1,3 @@
-# riglesias
-
 # Repo del Rama
 
 ###Prog Web2 - 1ra Entrega
