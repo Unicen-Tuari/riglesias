@@ -22,6 +22,18 @@ switch (isset($_GET[AppConfig::$ACTION]) ? $_GET[AppConfig::$ACTION] : AppConfig
       $productos_controller->show_item();
   break;
 
+  case AppConfig::$ACTION_REVIEWS:
+      $productos_controller->reviews();
+  break;
+
+  case AppConfig::$ACTION_GUIAS:
+      $productos_controller->guias();
+  break;
+
+  case AppConfig::$ACTION_CONTACTO:
+      $productos_controller->contacto();
+  break;
+
   default:
     echo "sin parametros";
   break;

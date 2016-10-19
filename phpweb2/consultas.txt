@@ -1,0 +1,1 @@
+- como manejar smarty para 1 solo elemento array sin usar foreach. se puede? por ejemplo para mostrar la descripcion cuando se hace click en un item de los productos

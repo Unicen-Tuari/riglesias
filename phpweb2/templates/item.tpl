@@ -10,7 +10,9 @@
   		<a class="prod-link" href="#"><img alt="" src=""></a>
   		<div class="caption">
   			<input class="compare-check" type="checkbox">
-          <!-- <img src="{$product['imgsrc']}" alt="{$product['nombre']}" /> -->
+          {foreach from=$imagenes item=imagen}
+            <img src="{$imagen['imgsrc']}" alt="" />
+          {/foreach}
   				<p>{$product['nombre']}</p>
   				<p>Precio: $ <span class="precio">{$product['precio']}</span></p>
           <p>Descripcion: {$product['descripcion']}</p>

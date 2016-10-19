@@ -10,6 +10,8 @@ $(document).ready(function(){
         cache: false,
         success: function(data){
           $('#contenedor-data').html(data);
+          addFuncAdminItems();
+          addFuncEditItem();
         }
       });
   });
@@ -35,11 +37,13 @@ $(document).ready(function(){
         cache: false,
         success: function(data){
           $('#contenedor-data').html(data);
-          addFuncSubmit();
+          addFuncSubmit('add_prod');
         }
       });
 
   });
+
+
 
   // $('#btnAddItem').on('click',function(){
   //   $.ajax({
@@ -54,7 +58,8 @@ $(document).ready(function(){
   //   });
   // });
 
-function addFuncSubmit(){
+function addFuncSubmit(action){
+  console.log(action);
   var testForm = document.getElementById('FormNewProd');
       testForm.onsubmit = function(event) {
         event.preventDefault();
@@ -63,7 +68,7 @@ function addFuncSubmit(){
         // formData.append('appended1', 'appended value');
          $.ajax({
         	method: "POST",
-        	url: "index.php?action=add_prod",
+        	url: "index.php?action="+action,
         	data: formData,
         	contentType: false,
         	cache: false,
@@ -73,6 +78,51 @@ function addFuncSubmit(){
         	}
       	});
     }
+}
+
+function addFuncAdminItems(){
+  console.log("yeah!");
+  $('.del-item').click(function(){
+     var id=($(this).attr('data-id'));
+
+     $.ajax({
+        method: "POST",
+        url: "index.php?action=delete_product&id="+id,
+        contentType: false,
+        cache: false,
+        success: function(data){
+          $('#contenedor-data').html(data);
+        }
+      });
+    });
+}
+
+function addFuncEditItem(){
+  console.log("funcion de edicion cargada!!");
+  $('.edit-item').click(function(){
+     var id=($(this).attr('data-id'));
+
+     $.ajax({
+        method: "POST",
+        url: "index.php?action=edit_product&id="+id,
+        contentType: false,
+        cache: false,
+        success: function(data){
+          $('#contenedor-data').html(data);
+          swapFieldSet();
+          addFuncSubmit('update_product');
+        }
+      });
+    });
+}
+
+function swapFieldSet(){
+  $('#id-prod').val($('#edit-id').val());
+  $('#nombre-prod').val($('#edit-nombre').val());
+  $('#precio-prod').val($('#edit-precio').val());
+  $('#stock-prod').val($('#edit-stock').val());
+  $('#desc-prod').val($('#edit-desc').val());
+  $('#newprod-cat').val(''+$('#edit-cat').val());
 }
 
   console.log("cargado el js admin");

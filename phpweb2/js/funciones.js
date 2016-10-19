@@ -16,7 +16,11 @@ $(document).ready(function(){
     if(name=='productos'){
       cargaProductos();
       console.log("productos");
+    }else {
+      cargaSeccion(name);
+      console.log(name);
     }
+
     $('#nav-var-links li').removeClass('active')
     $(this).addClass('active');
   })
@@ -61,6 +65,18 @@ function cargaDescripcion(id){
   $.ajax({
     method: "POST",
     url: "index.php?action=show_item&item="+id,
+    contentType:'html',
+    cache: false,
+    success: function(data){
+      $('#contenedor-data').html(data);
+    }
+  });
+}
+
+function cargaSeccion(action){
+  $.ajax({
+    method: "POST",
+    url: "index.php?action="+action,
     contentType:'html',
     cache: false,
     success: function(data){

@@ -18,19 +18,29 @@ class productos_controller
 
   public function show_products(){
     $productos = $this->productos_model->get_products();
-    $this->productos_view->show_products($productos);
+    $thumbs = $this->productos_model->get_thumbnails();
+    $this->productos_view->show_products($productos,$thumbs);
+
   }
 
   public function show_item(){
-    if(isset($_REQUEST['item'])){
-      //echo "item esta puesto";
       $id=$_REQUEST['item'];
-      //print_r($id);
-      $item = $this->productos_model->get_item($id);
-      $this->productos_view->show_item($item);
-    }else echo "no se proceso";
+      $item=$this->productos_model->get_item($id);
+      $images=$this->productos_model->get_images($id);
+      $this->productos_view->show_item($item,$images);
   }
 
+  public function reviews(){
+    $this->productos_view->reviews();
+  }
+
+  public function guias(){
+    $this->productos_view->guias();
+  }
+
+  public function contacto(){
+    $this->productos_view->contacto();
+  }
 
 }
 

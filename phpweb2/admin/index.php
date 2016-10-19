@@ -27,6 +27,18 @@ switch (isset($_GET[AppConfig::$ACTION]) ? $_GET[AppConfig::$ACTION] : AppConfig
       $productos_controller->add_product();
   break;
 
+  case AppConfig::$ACTION_EDIT_PRODUCT:
+      $productos_controller->edit_product();
+  break;
+
+  case AppConfig::$ACTION_UPDATE_PRODUCT:
+      $productos_controller->update_product();
+  break;
+
+  case AppConfig::$ACTION_DELETE_PRODUCT:
+      $productos_controller->delete_product();
+  break;
+
   case AppConfig::$ACTION_SHOW_ITEM:
       $productos_controller->show_item();
   break;

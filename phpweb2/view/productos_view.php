@@ -31,19 +31,41 @@ class productos_view
     $this->smarty->display('../templates/table_productos.tpl');
   }
 
-  public function show_products($productos){
-    //print_r($productos);
+  //muestra todos los productos en disponibles con thumbnails, precio y nombre
+  public function show_products($productos,$thumbs){
     $this->smarty->assign('productos',$productos);
+    $this->smarty->assign('thumbs',$thumbs);
     $this->smarty->display('productos.tpl');
   }
 
-  public function show_item($item){
-    //print_r($item);
+  // muestra todos los datos de un producto seleccionado
+  public function show_item($item,$images){
     $this->smarty->assign('producto',$item);
+    $this->smarty->assign('imagenes',$images);
     $this->smarty->display('item.tpl');
   }
 
+  // ADMIN - muestra el formulario de edicion de un item seleccionado
+  public function show_edit_item($datos,$images){
+    $this->smarty->assign('producto',$datos);
+    $this->smarty->assign('imagenes',$images);
+    $this->smarty->display('../templates/edit_item.tpl');
+  }
 
+  // muestra la seccion reviews
+  public function reviews(){
+    $this->smarty->display('reviews.tpl');
+  }
+
+  // muestra la seccion guias
+  public function guias(){
+    $this->smarty->display('guias.tpl');
+  }
+
+  // muestra la seccion contacto
+  public function contacto(){
+    $this->smarty->display('contacto.tpl');
+  }
 }
 
 

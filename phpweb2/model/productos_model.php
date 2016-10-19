@@ -13,7 +13,9 @@ class productos_model
   }
 
   public function get_products(){
+
     $select = $this->db->prepare("select * from productos");
+    // $select = $this->db->prepare("select * from productos P join prod_images I ON (P.id=I.prod_id) group by P.id");
     $select->execute();
     $prods=$select->fetchAll(PDO::FETCH_ASSOC);
     //print_r($prods);
@@ -26,6 +28,13 @@ class productos_model
     $item=$select->fetchAll(PDO::FETCH_ASSOC);
     //print_r($item);
     return $item;
+  }
+
+  public function get_images($id){
+    $select = $this->db->prepare("select * from prod_images where prod_id=?");
+    $select->execute(array($id));
+    $paths_imgs=$select->fetchAll(PDO::FETCH_ASSOC);
+    return $paths_imgs;
   }
 
   public function copyImage($image){
@@ -44,11 +53,28 @@ class productos_model
       $insert = $this->db->prepare("INSERT INTO prod_images(id, prod_id, imgsrc) VALUES(?,?,?)");
       $insert->execute(array(null,$id,$path_image));
     }
-
-
-
   }
-}
+
+  public function delete_product($id){
+    $to_delete = $this->db->prepare("delete from productos where id=?");
+    $to_delete->execute(array($id));
+  }
+
+  public function update_product($id,$nombre,$cat,$precio,$stock,$descr){
+    $insert = $this->db->prepare("UPDATE productos SET nombre = ?, categoria = ?, precio = ?, stock = ?, descripcion = ? WHERE id =?");
+    $insert->execute(array($nombre,$cat,$precio,$stock,$descr,$id));
+  }
+
+  public function get_thumbnails(){
+    //SELECT `prod_id`,`imgsrc` FROM `prod_images` GROUP BY `prod_id`
+    $select = $this->db->prepare("select prod_id,imgsrc from prod_images group by prod_id");
+    $select->execute(array(null));
+    $paths_thumbs=$select->fetchAll(PDO::FETCH_UNIQUE);
+    return $paths_thumbs;
+  }
+
+
+}//end clase
 
 
 

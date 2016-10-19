@@ -69,7 +69,35 @@ class productos_controller
       return ($file_type =='image/jpeg' || $file_type =='image/png' );
   }
 
+  public function delete_product(){
+    $id=$_REQUEST['id'];
+    $this->productos_model->delete_product($id);
 
+    $productos = $this->productos_model->get_products();
+    $this->productos_view->show_table_products($productos);
+  }
+
+  public function edit_product(){
+    $id=$_REQUEST['id'];
+    $datos=$this->productos_model->get_item($id);
+    $images=$this->productos_model->get_images($id);
+
+    $this->productos_view->show_edit_item($datos,$images);
+    // print_r($datos);
+  }
+
+  public function update_product(){
+    $id=$_REQUEST['id'];
+    $nombre=$_REQUEST['nombre'];
+    $cat=$_REQUEST['cat'];
+    $precio=$_REQUEST['precio'];
+    $stock=$_REQUEST['stock'];
+    $descr=$_REQUEST['descr'];
+
+    $this->productos_model->update_product($id,$nombre,$cat,$precio,$stock,$descr);
+    $productos = $this->productos_model->get_products();
+    $this->productos_view->show_table_products($productos);
+  }
 }
 
 

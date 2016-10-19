@@ -12,6 +12,7 @@
           <th>Categoria</th>
           <th>Precio</th>
           <th>Stock</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +23,10 @@
           <td>{$producto['categoria']}</td>
           <td>{$producto['precio']}</td>
           <td>{$producto['stock']}</td>
+          <td>
+            <button class="btn btn-primary btn-xs edit-item glyphicon glyphicon-edit" type="button" data-id="{$producto['id']}"></button>
+            <button class="btn btn-danger btn-xs del-item glyphicon glyphicon-trash" type="button" data-id="{$producto['id']}"></button>
+          </td>
         </tr>
         {/foreach}
       </tbody>

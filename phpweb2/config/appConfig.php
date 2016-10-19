@@ -12,6 +12,9 @@ class AppConfig{
   public static $ACTION_SHOW_PRODUCTS = 'show_prod';
   public static $ACTION_ADD_NEWS = 'add_news';
   public static $ACTION_SHOW_NEWS = 'show_news';
+  public static $ACTION_REVIEWS = 'reviews';
+  public static $ACTION_GUIAS = 'guias';
+  public static $ACTION_CONTACTO = 'contacto';
 }
 
 
