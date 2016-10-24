@@ -9,12 +9,13 @@ class productos_model
 
   public function __construct()
   {
-    $this->db = new PDO('mysql:host=localhost;dbname=camping_pesca_motos;charset=utf8','usuario1','123456');
+    $this->db = new PDO('mysql:host=localhost;dbname=camping_pesca_motos;charset=utf8','root','root');
   }
 
   public function get_products(){
 
-    $select = $this->db->prepare("select * from productos");
+    $select = $this->db->prepare("SELECT P.id,P.nombre,P.precio,P.descripcion,P.categoria,P.stock,I.imgsrc FROM productos P LEFT JOIN prod_images I ON P.id = I.prod_id GROUP BY P.id ");
+    // $select = $this->db->prepare("select * from productos");
     // $select = $this->db->prepare("select * from productos P join prod_images I ON (P.id=I.prod_id) group by P.id");
     $select->execute();
     $prods=$select->fetchAll(PDO::FETCH_ASSOC);
