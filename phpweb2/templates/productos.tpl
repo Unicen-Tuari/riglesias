@@ -9,7 +9,13 @@
   	<div class="thumbnail well">
       <!-- METER LAS IMAGENES DE LOS PRODUCTOS ACA -->
   		<!-- <a class="prod-link" href="#"><img alt="" src="{$producto['imgsrc']}"></a> -->
-  		<a class="prod-link" href="#"><img alt="" src="img/productos/doitexr4.jpg"></a>
+      <a class="item-btn-desc" data-id-item="{$producto['id']}" href="#">
+        {if $producto['imgsrc'] != ''}
+          <img alt="" src="{$producto['imgsrc']}">
+        {else}
+          <img alt="" src="img/prods/default.jpg">
+        {/if}
+      </a>
   		<div class="caption">
   			<input class="compare-check" type="checkbox">
   			<a class="item-btn-desc" data-id-item="{$producto['id']}" href="#">
