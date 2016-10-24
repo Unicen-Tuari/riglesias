@@ -5,19 +5,18 @@
   		<p>Descripcion de {$product['nombre']}</p>
   	</div>
   </div>
-  <div class="col-sm-4 col-md-3">
-  	<div class="thumbnail well">
-  		<a class="prod-link" href="#"><img alt="" src=""></a>
-  		<div class="caption">
-  			<input class="compare-check" type="checkbox">
+  <div class="row">
           {foreach from=$imagenes item=imagen}
-            <img src="{$imagen['imgsrc']}" alt="" />
+          <div class="col-sm-3 col-md-3">
+            <img src="{$imagen['imgsrc']}" alt="" class="img-thumbnail"/>
+          </div>
           {/foreach}
+  </div>
+  <div class="row">
+    <div class="well well-lg" style="margin-top:30px;">
   				<p>{$product['nombre']}</p>
   				<p>Precio: $ <span class="precio">{$product['precio']}</span></p>
           <p>Descripcion: {$product['descripcion']}</p>
-
-  		</div>
-  	</div>
+    </div>
   </div>
   {/foreach}
