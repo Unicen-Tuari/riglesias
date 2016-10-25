@@ -12,8 +12,8 @@
       <p>{$noticia['fecha']}</p>
       <hr>
       <figure class="news-fig">
-        <img src="img/carpa_doite_small.jpg" alt="Carpa Doite" />
-        <figcaption>La carpa Doite armada</figcaption>
+        <img src="{$noticia['imgsrc']}" alt="Carpa Doite" />
+        <figcaption>Imagen Descriptiva</figcaption>
       </figure>
       <p>{$noticia['cuerpo']}</p>
 

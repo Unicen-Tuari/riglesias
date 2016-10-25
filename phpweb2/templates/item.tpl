@@ -2,7 +2,7 @@
   <div class="row productos">
   	<div class="jumbotron productos">
   		<h1>Productos</h1>
-  		<p>Descripcion de {$product['nombre']}</p>
+  		<p>{$product['nombre']}</p>
   	</div>
   </div>
   <div class="row">

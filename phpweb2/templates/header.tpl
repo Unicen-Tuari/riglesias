@@ -84,7 +84,7 @@
         		</div>
         		<div id="bs-example-navbar-collapse-6" class="collapse navbar-collapse">
         			<ul class="nav navbar-nav" id="nav-var-links">
-        				<li class="active"><a href="index.php" name="news">Home</a></li>
+        				<li class="active"><a href="#" name="show_news_body">Home</a></li>
         				<li><a href="#" name="productos">Productos</a></li>
         				<li><a href="#" name="reviews">Reviews</a></li>
         				<li><a href="#" name="guias">Guias</a></li>

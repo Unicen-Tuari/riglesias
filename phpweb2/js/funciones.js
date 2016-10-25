@@ -24,17 +24,12 @@ $(document).ready(function(){
     $('#nav-var-links li').removeClass('active')
     $(this).addClass('active');
   })
-///////////////////////funciones de formulario agregar nuevo item/////////////////////////////
-  //
-  // $('#newprod-agregar').on('click',function(){
-  //   enviarForm();
-  // });
+
 });
 
 
 function bindLinkDescription(){
   $('.item-btn-desc').click(function(){
-    //event.preventDefault();
     console.log($(this).attr('data-id-item'));
     $.ajax({
       method: "POST",

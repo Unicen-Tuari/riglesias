@@ -14,6 +14,10 @@ switch (isset($_GET[AppConfig::$ACTION]) ? $_GET[AppConfig::$ACTION] : AppConfig
       $noticia_controller->show_news();
   break;
 
+  case AppConfig::$ACTION_SHOW_NEWS_BODY:
+      $noticia_controller->show_news_body();
+  break;
+
   case AppConfig::$ACTION_SHOW_PRODUCTS:
       $productos_controller->show_products();
   break;

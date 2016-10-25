@@ -18,5 +18,10 @@ class noticia_view
     $this->smarty->display('noticias.tpl');
   }
 
+  public function show_body($noticias){
+    $this->smarty->assign('noticias',$noticias);
+    $this->smarty->display('noticias_body.tpl');
+  }
+
 }
 ?>

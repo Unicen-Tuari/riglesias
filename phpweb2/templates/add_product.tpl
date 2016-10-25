@@ -11,6 +11,7 @@
                         <label for="exampleInputEmail1">Categoria</label>
                         <select name="cat" id="newprod-cat" class="form-control">
                           <option value="" disabled selected>- Elija categoria -</option>
+                          <option value="buceo">Buceo</option>
                           <option value="carpa">Carpa</option>
                           <option value="cania">Caña de pescar</option>
                           <option value="kayak">Kayaks</option>
@@ -51,4 +52,3 @@
                     </form>
 
   </div>
-  <script type="text/javascript" src="../js/admin.js" charset="utf-8"></script>

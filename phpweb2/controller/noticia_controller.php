@@ -20,13 +20,13 @@ class noticia_controller
     $this->noticia_view->show($noticias);
   }
 
-  // en STANDBY pq no existe el form de html, primero voy a hacer otras cosas
-  // public function create_news(){
-  //   $titulo=$_POST['titulo'];
-  //   $fecha=$_POST['fecha'];
-  //   $this->noticia_model->set_noticia($noticia);
-  //
-  // }
+  public function show_news_body(){
+    $noticias = $this->noticia_model->get_noticias();
+    $this->noticia_view->show_body($noticias);
+  }
+
+
+
 }
 
 ?>

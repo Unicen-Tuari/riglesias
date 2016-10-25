@@ -72,4 +72,3 @@
   </form>
 
   </div>
-  <script type="text/javascript" src="../js/admin.js" charset="utf-8"></script>

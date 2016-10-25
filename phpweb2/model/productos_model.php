@@ -9,7 +9,7 @@ class productos_model
 
   public function __construct()
   {
-    $this->db = new PDO('mysql:host=localhost;dbname=camping_pesca_motos;charset=utf8','root','root');
+    $this->db = new PDO('mysql:host=localhost;dbname=camping_pesca_motos;charset=utf8','usuario1','123456');
   }
 
   public function get_products(){
@@ -52,7 +52,10 @@ class productos_model
     foreach ($arr_img as $image){
       $path_image =  $this->copyImage($image);
       $insert = $this->db->prepare("INSERT INTO prod_images(id, prod_id, imgsrc) VALUES(?,?,?)");
+      $path_image = substr($path_image, 3);
       $insert->execute(array(null,$id,$path_image));
+      //echo ltrim($path_image, "../");
+      //echo substr($path_image, 3);
     }
   }
 
